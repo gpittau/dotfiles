@@ -29,7 +29,7 @@ alias ...='cd ../..'
 alias -- -='cd -'
 
 # File size
-alias fs="stat -f '%z bytes'"
+alias fs="stat -c '%z bytes'"
 alias df="df -h"
 
 # Recursively delete `.DS_Store` files
