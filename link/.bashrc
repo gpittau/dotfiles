@@ -1,22 +1,19 @@
-# Add binaries into the path
-PATH=~/.dotfiles/bin:$PATH
-export PATH
+# ~/.bashrc: executed by bash(1) for non-login shells.
+# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
+# for examples
 
-# Source all files in ~/.dotfiles/source/
-function src() {
-  local file
-  if [[ "$1" ]]; then
-    source "$HOME/.dotfiles/source/$1.sh"
-  else
-    for file in ~/.dotfiles/source/*; do
-      source "$file"
+# If not running interactively, don't do anything
+#[ -z "$PS1" ] && return
+
+
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+run_scripts()
+{
+    for script in $1/*; do
+        [ -x "$script" ] || continue
+        . $script
     done
-  fi
 }
 
-# Run dotfiles script, then source.
-function dotfiles() {
-  ~/.dotfiles/bin/dotfiles "$@" && src
-}
-
-src
+run_scripts $HOME/.bashrc.d
