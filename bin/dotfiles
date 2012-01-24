@@ -12,6 +12,9 @@ https://github.com/cowboy/dotfiles
 Copyright (c) 2011 "Cowboy" Ben Alman
 Licensed under the MIT license.
 http://benalman.com/about/license/
+
+fork: gpittau
+https://github.com/gpittau/dotfiles
 HELP
 exit; fi
 
@@ -154,12 +157,14 @@ if [[ ! "$(type -P git)" ]]; then
   exit 1
 fi
 
+git_user=gpittau
+git_repo=git://github.com/$git_user/dotfiles.git
 # Initialize.
 if [[ ! -d ~/.dotfiles ]]; then
   new_dotfiles_install=1
   # ~/.dotfiles doesn't exist? Clone it!
   e_header "Downloading dotfiles"
-  git clone --recursive git://github.com/cowboy/dotfiles.git ~/.dotfiles
+  git clone --recursive $git_repo ~/.dotfiles
   cd ~/.dotfiles
 else
   # Make sure we have the latest files.
