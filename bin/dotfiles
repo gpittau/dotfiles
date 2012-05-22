@@ -4,7 +4,7 @@ echo 'Dotfiles - "Cowboy" Ben Alman - http://benalman.com/'
 
 if [[ "$1" == "-h" || "$1" == "--help" ]]; then cat <<HELP
 
-Usage: $(basename "$0")
+Usage: $(basename "$0") [repo]
 
 See the README for documentation.
 https://github.com/cowboy/dotfiles
@@ -18,6 +18,9 @@ https://github.com/gpittau/dotfiles
 HELP
 exit; fi
 
+git_user=gpittau
+git_repo="${1:-git://github.com/$git_user/dotfiles.git}"
+git_branch="${2:-master}"
 # Logging stuff.
 function e_header()   { echo -e "\n\033[1m$@\033[0m"; }
 function e_success()  { echo -e " \033[1;32m✔\033[0m  $@"; }
@@ -157,14 +160,12 @@ if [[ ! "$(type -P git)" ]]; then
   exit 1
 fi
 
-git_user=gpittau
-git_repo=git://github.com/$git_user/dotfiles.git
 # Initialize.
 if [[ ! -d ~/.dotfiles ]]; then
   new_dotfiles_install=1
   # ~/.dotfiles doesn't exist? Clone it!
   e_header "Downloading dotfiles"
-  git clone --recursive $git_repo ~/.dotfiles
+  git clone --recursive $git_repo -b $git_branch ~/.dotfiles
   cd ~/.dotfiles
 else
   # Make sure we have the latest files.
