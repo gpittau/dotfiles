@@ -1,4 +1,4 @@
-# This file gets copied to /etc/sudoers.d/ by init/10_ubuntu.sh
+# This file gets copied to /etc/sudoers.d/ by init/init-sudo
 # Reference: http://ubuntuforums.org/showthread.php?t=1132821
 
 # Command aliases.
@@ -7,3 +7,4 @@ Cmnd_Alias APT = /usr/bin/apt-get
 # Members of the sudo and admin groups can run these commands without password.
 %sudo ALL=(ALL) ALL, NOPASSWD:APT
 %admin ALL=(ALL) ALL, NOPASSWD:APT
+%sgm ALL=(ALL) ALL, NOPASSWD:APT

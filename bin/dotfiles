@@ -1,6 +1,7 @@
 #!/bin/bash
 
 echo 'Dotfiles - "Cowboy" Ben Alman - http://benalman.com/'
+echo 'leaked by gpittau'
 
 if [[ "$1" == "-h" || "$1" == "--help" ]]; then cat <<HELP
 
@@ -21,6 +22,7 @@ exit; fi
 git_user=gpittau
 git_repo="${1:-git://github.com/$git_user/dotfiles.git}"
 git_branch="${2:-master}"
+
 # Logging stuff.
 function e_header()   { echo -e "\n\033[1m$@\033[0m"; }
 function e_success()  { echo -e " \033[1;32m✔\033[0m  $@"; }
@@ -201,3 +203,6 @@ fi
 
 # All done!
 e_header "All done!"
+
+# apply
+source ~/.bashrc
