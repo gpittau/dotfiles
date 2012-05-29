@@ -6,7 +6,7 @@
 # Update APT.
 e_header "Updating APT"
 sudo apt-get -qq update
-sudo apt-get -qq upgrade
+#sudo apt-get -qq upgrade
 
 # Install APT packages.
 packages=(
@@ -18,6 +18,8 @@ packages=(
   #sl id3tool
   #nmap telnet
   htop
+  byobu
+  vim
 )
 
 list=()
