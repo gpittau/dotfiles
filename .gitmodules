@@ -3,4 +3,5 @@
 	url = git://github.com/visionmedia/git-extras.git
 [submodule "link/.vim"]
 	path = link/.vim
-	url = git@github.com:gpittau/vimfiles.git
+	url = /var/www/.dotfiles/link/.vim/.git
+	#url = git@github.com:gpittau/vimfiles.git
