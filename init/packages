@@ -19,7 +19,9 @@ packages=(
   #nmap telnet
   htop
   byobu
+  ctags
   vim
+  php5-cli
 )
 
 list=()
