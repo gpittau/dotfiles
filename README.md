@@ -1,6 +1,6 @@
 # Dotfiles
 
-My Debian dotfiles.
+My TKL-Debian6 dotfiles.
 
 ## Why is this a git repo?
 
@@ -32,17 +32,7 @@ Note:
 * Files in `caches` are cached files, only used by some scripts. This folder will only be created if necessary.
 
 ## Installation
-### OS X
-Notes:
-
-* You may need to be an administrator.
-* You may need to install XCode first.
-
-```sh
-bash -c "$(curl -fsSL https://raw.github.com/gpittau/dotfiles/debian6-core/bin/dotfiles)" && source ~/.bashrc
-```
-
-### Debian
+### Turnkeylinux Debian6
 Notes:
 
 * Added package repositories for byobu
@@ -50,7 +40,6 @@ Notes:
 * You'll have to enter your password for sudo.
 
 ```sh
-sudo apt-get -qq update && sudo apt-get -qq upgrade && sudo apt-get -qq install curl && echo &&
 bash -c "$(curl -fsSL https://raw.github.com/gpittau/dotfiles/debian6-core/bin/dotfiles)" && source ~/.bashrc
 ```
 
@@ -59,6 +48,7 @@ These things will be installed, but _only_ if they aren't already.
 
 ### Debian
 * APT
+  * sudo
   * git-core
   * tree
   * htop
