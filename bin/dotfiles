@@ -21,7 +21,7 @@ exit; fi
 
 git_user=gpittau
 git_repo="${1:-git://github.com/$git_user/dotfiles.git}"
-git_branch="${2:-master}"
+git_branch="${2:-debian6-core}"
 
 # Logging stuff.
 function e_header()   { echo -e "\n\033[1m$@\033[0m"; }
