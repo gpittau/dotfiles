@@ -3,8 +3,6 @@
 #abort please
 #e_error "Skipping Ubuntuuuuu" && return 0
 
-#sudo echo "deb http://ppa.launchpad.net/byobu/ppa/ubuntu lucid main" >> /etc/apt/sources.list.d/sources.list
-#sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F430BBA5
 # Update APT.
 e_header "Updating APT"
 sudo apt-get -qq update
@@ -20,10 +18,7 @@ packages=(
   #sl id3tool
   #nmap telnet
   htop
-  tmux
-  byobu
   ctags
-  vim
 )
 
 list=()
