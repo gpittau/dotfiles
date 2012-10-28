@@ -1,8 +1,10 @@
-# Ubuntu-only stuff. Abort if not Ubuntu.
-[[ "$(cat /etc/issue 2> /dev/null)" =~ Ubuntu ]] || return 1
+# Debian-only stuff. Abort if not Debian.
+[[ "$(cat /etc/issue 2> /dev/null)" =~ Debian ]] || return 1
 #abort please
 #e_error "Skipping Ubuntuuuuu" && return 0
 
+echo "deb http://ppa.launchpad.net/byobu/ppa/ubuntu lucid main" >> /etc/apt/sources.list.d/sources.list
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F430BBA5
 # Update APT.
 e_header "Updating APT"
 sudo apt-get -qq update
@@ -18,10 +20,10 @@ packages=(
   #sl id3tool
   #nmap telnet
   htop
+  tmux
   byobu
   ctags
   vim
-  php5-cli
 )
 
 list=()
