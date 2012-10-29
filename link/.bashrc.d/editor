@@ -1,4 +1,6 @@
 # Editing
+mkdir -p ~/.vim/backups
+mkdir -p ~/.vim/swaps
 
 export EDITOR='vim'
 export LESSEDIT='vim %f'
