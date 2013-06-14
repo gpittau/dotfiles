@@ -20,7 +20,7 @@ HELP
 exit; fi
 
 git_user=gpittau
-git_repo="${1:-git://github.com/$git_user/dotfiles.git}"
+git_repo="${1:-https://github.com/$git_user/dotfiles.git}"
 git_branch="${2:-debian6-core}"
 
 # Logging stuff.
