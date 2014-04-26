@@ -6,7 +6,7 @@
   token = TOKEN
 [core]
   #autocrlf = input
-	whitespace = warn,space-before-tab,tab-in-indent,trailing-space
+	whitespace = warn,indent-with-non-tab,space-before-tab,trailing-space,tab-width=2
   excludesfile = /home/gpittau/.dotfiles/conf/.gitignore_global
 	pager = less -x1,5
 [apply]
