@@ -6,7 +6,7 @@
   token = TOKEN
 [core]
   #autocrlf = input
-	whitespace = warn,indent-with-non-tab,space-before-tab,trailing-space,tab-width=2
+  whitespace = warn,space-before-tab,tab-in-indent,trailing-space
   excludesfile = /home/gpittau/.dotfiles/conf/.gitignore_global
 	pager = less -x1,5
 [apply]
@@ -61,3 +61,6 @@
   insteadOf = "gist:"
 [url "git@heroku.com:"]
   insteadOf = "heroku:"
+[http]
+	proxy = http://proxy.corp.globant.com:3128
+	sslVerify = false
