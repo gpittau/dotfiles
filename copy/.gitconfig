@@ -8,7 +8,6 @@
   #autocrlf = input
   whitespace = warn,space-before-tab,tab-in-indent,trailing-space
   excludesfile = /home/gpittau/.dotfiles/conf/.gitignore_global
-	pager = less -x1,5
 [apply]
   whitespace = warn
 [alias]
