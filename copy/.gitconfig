@@ -1,6 +1,6 @@
 [user]
   name = Gabriel Pittau
-  email = EMAIL
+  email = gabriel.pittau@globant.com
 [github]
   user = gpittau
   token = TOKEN
@@ -61,5 +61,5 @@
 [url "git@heroku.com:"]
   insteadOf = "heroku:"
 [http]
-	proxy = http://proxy.corp.globant.com:3128
-	sslVerify = false
+  proxy = http://proxy.corp.globant.com:3128
+  sslVerify = false

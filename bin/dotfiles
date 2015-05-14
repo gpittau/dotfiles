@@ -21,7 +21,7 @@ exit; fi
 
 git_user=gpittau
 git_repo="${1:-https://github.com/$git_user/dotfiles.git}"
-git_branch="${2:-gpittau-2015}"
+git_branch="${1:-gpittau-2015-HP}"
 
 # Logging stuff.
 function e_header()   { echo -e "\n\033[1m$@\033[0m"; }
