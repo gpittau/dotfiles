@@ -40,7 +40,7 @@ Notes:
 * You'll have to enter your password for sudo.
 
 ```sh
-bash -c "$(curl -k -fsSL https://rawgit.com/gpittau/dotfiles/gpittau-2015/bin/dotfiles)" && source ~/.bashrc
+bash -c "$(curl -k -fsSL https://raw.githubusercontent.com/gpittau/dotfiles/IDE-2020/bin/dotfiles)" && source ~/.bashrc
 ```
 
 ## The "init" step
