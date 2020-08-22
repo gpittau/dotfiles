@@ -20,7 +20,4 @@ fi
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
-case "$-" in *i*) byobu-launcher && exit 0; esac;
 mesg n
-`echo $- | grep -qs i` && byobu-launcher && exit 0
-_byobu_sourced=1 . /usr/bin/byobu-launch
